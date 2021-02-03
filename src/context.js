@@ -1,31 +1,42 @@
 import React, { Component,useEffect,useState} from 'react';
-import {detailProduct, storeProducts} from './data';
+import { storeProducts} from './data';
+import {Button} from 'antd';
 
 const ProductContext = React.createContext();
  
 function ProductProvider(props) {
     const [products,setProducts] =  useState([])
-    const [detail,setDetailProduct] =  useState(detailProduct)
+    // const [products,setProducts] =  useState(storeProducts)
     const [cart,setCart] = useState([])
+    const[cartSubTotal,setCartSubTotal] = useState(0)
+    const[cartTotal,setCartTotal] = useState(0)
+    const[cartTax,setCartax] = useState(0)
 
-     useEffect(()=>{
-         setData()
-      })
+      
 
-     const setData =()=>{
-        let products = [];
+    
+
+    
+    useEffect(()=>{
+        let tempProducts = [];
         storeProducts.forEach( item =>{
             const singleItem = {...item};
-            products = [...products,singleItem]; //array of object
+            tempProducts = [...tempProducts,singleItem]; 
+            //array of object
             
         });
-        console.log(`products: ${products}`)
-            console.log( typeof products)
-        setProducts( 
-             {products}
-        );
-        console.log(products)
-    }
+        setProducts(tempProducts)
+     
+    },[])
+// const testMe = ()=>{
+//     console.log("state product:" ,products[0].inCart)
+//     console.log("store product:" ,storeProducts[0].inCart)
+//     const tempProducts = [...products]
+//     tempProducts[0].inCart = true
+//     setProducts(tempProducts)
+//     console.log("state product:" ,products[0].inCart)
+//     console.log("store product:" ,storeProducts[0].inCart)
+// }
 
     const getItem  = (id)=>  {
         const product = products.find(item => 
@@ -34,9 +45,8 @@ function ProductProvider(props) {
         return product
     }
 
-    const handDetail = (id)=>{
-        console.log('hello from detail')
-    }
+
+
    const addToCart = (id)=>{
         let tempProducts = [...products] 
         console.log(tempProducts)
@@ -48,27 +58,29 @@ function ProductProvider(props) {
         product.inCart = true;
         const price = product.price;
         product.total = price 
-        console.log(product)
-        console.log(typeof products)
-   setProducts(() => {
-            return {
-                products: [...tempProducts],
-              cart: [...cart, product],
-            };
-          });
-        };
+   setProducts( [...tempProducts])
+    setCart([...cart, product])
+            
+          }
+        
         
 
     return (
         <ProductContext.Provider 
-        value = {{ 
-        products,
-        cart,
-        detail ,
-        getItem,
-        handDetail,
-        addToCart }}>
-                {props.children}
+              
+        value = {{
+            products :products,
+            addToCart :addToCart,
+            getItem : getItem,
+            cart:cart,
+            cartSubTotal : cartSubTotal,
+            cartTotal : cartTotal,
+            cartTax :cartTax
+
+}}> 
+    {/* <button onClick = {testMe}> test Me </button> */}
+    <Button></Button>
+            {props.children}
         </ProductContext.Provider>
     )
 }
