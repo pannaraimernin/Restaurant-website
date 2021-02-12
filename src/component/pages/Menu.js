@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import {Button} from 'antd';
-import { ProductConsumer, ProductProvider } from '../../context';
+import { ProductConsumer } from '../../context';
 
 import Product from "../Product";
 import {ShoppingCartOutlined } from '@ant-design/icons';

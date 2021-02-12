@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import {Form, Input, Button, Row, Col, Divider,notification} from 'antd';
+import {Form, Input, Button, Row, Col, Divider} from 'antd';
 import Title from 'antd/lib/typography/Title';
 import {ShoppingCartOutlined } from '@ant-design/icons';
 

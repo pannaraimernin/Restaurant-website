@@ -1,6 +1,6 @@
-import Item from 'antd/lib/list/Item';
-import React,{useState} from 'react'
-import { ProductConsumer } from '../../../context';
+
+import React from 'react'
+
 import CartItem from '../Cart/CartItem';
 
 

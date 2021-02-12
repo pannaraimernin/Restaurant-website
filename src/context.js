@@ -1,4 +1,4 @@
-import React, { Component,useEffect,useState,useCallback} from 'react';
+import React, { useEffect,useState} from 'react';
 import { storeProducts} from './data';
 import {Button} from 'antd';
 

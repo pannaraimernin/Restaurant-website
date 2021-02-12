@@ -2,7 +2,7 @@
 import './App.css';
 import './myStyle.css'
 
-import {Switch,Route,Redirect} from 'react-router-dom';
+import {Switch,Route} from 'react-router-dom';
 import Home from './component/pages/Home';
 import Menu from './component/pages/Menu';
 import SignIn from './component/pages/SignIn';
