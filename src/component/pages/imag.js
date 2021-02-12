@@ -6,7 +6,7 @@ import Cart from './Cart/cart';
 
 function Imag() {
     return (
-        <div style={{backgroundImage: 'url(images/mainBg.jpg)' , backgroundsize: '100px'
+        <div style={{backgroundcolor: 'white' , backgroundsize: '100px'
         }}>
         <div>
            

@@ -1,4 +1,4 @@
-import React, { Component,useEffect,useState} from 'react';
+import React, { Component,useEffect,useState,useCallback} from 'react';
 import { storeProducts} from './data';
 import {Button} from 'antd';
 
@@ -9,15 +9,21 @@ function ProductProvider(props) {
     // const [products,setProducts] =  useState(storeProducts)
     const [cart,setCart] = useState([])
     const[cartSubTotal,setCartSubTotal] = useState(0)
-    const[cartTotal,setCartTotal] = useState(0)
+    const[cartTotal,setCartTotal] = useState()
     const[cartTax,setCartax] = useState(0)
+  
 
-      
-
-    
-
-    
     useEffect(()=>{
+     setData()
+     
+    },[])
+    
+    useEffect(()=> {addTotal()},[])
+    useEffect(()=> {setData();
+        addTotal()},[])
+    useEffect(()=>{addTotal()},[])
+    
+    const setData = ()=>{
         let tempProducts = [];
         storeProducts.forEach( item =>{
             const singleItem = {...item};
@@ -26,8 +32,8 @@ function ProductProvider(props) {
             
         });
         setProducts(tempProducts)
-     
-    },[])
+    }
+
 // const testMe = ()=>{
 //     console.log("state product:" ,products[0].inCart)
 //     console.log("store product:" ,storeProducts[0].inCart)
@@ -62,12 +68,70 @@ function ProductProvider(props) {
     setCart([...cart, product])
             
           }
+
+           const increment =(id)=>{
+            let tempCart = [...cart]
+            const selectProduct = tempCart.find( item=> item.id === id)
+            const index = tempCart.indexOf(selectProduct) 
+            const product = tempCart[index]
+            
+            product.count = product.count + 1;
+            product.total = product.count * product.price;
+            setCart([...tempCart])
+
+
+          }
+          const decrement =(id)=>{
+            let tempCart = [...cart]
+            const selectProduct = tempCart.find( item=> item.id === id)
+            const index = tempCart.indexOf(selectProduct) 
+            const product = tempCart[index]
+            
+            product.count = product.count - 1;
+            if(product.count === 0 )
+            {return removeItem(id)}
+            else{ product.total = product.count * product.price;}
+
+           setCart([...tempCart])
+
+        }
+        const removeItem =(id)=>{
+            let tempProducts = [...products]
+            let tempCart = [...cart]
+            tempCart = tempCart.filter(item => item.id !==id)
+
+            const index = tempProducts.indexOf(getItem(id));
+            let removeProduct = tempProducts[index]
+            removeProduct.inCart = false;
+            removeProduct.count = 0;
+            removeProduct.total = 0;
+            setCart([...tempCart])
+            setProducts([...tempProducts])
+
+             
+        }
+       
+        const clearCart = ()=>{
+            setCart([])
+        }
+        const addTotal = ()=>{
+            let subTotal = 0; 
+            cart.map(item => (subTotal += item.total))
+            const tempTax = subTotal * 0.1;
+            const tax = parseFloat(tempTax.toFixed(2))
+            const total = subTotal + tax;
+            setCartSubTotal(subTotal)
+            setCartax(tax)
+            setCartTotal(total)
+
+
+        }
         
         
 
     return (
         <ProductContext.Provider 
-              
+               
         value = {{
             products :products,
             addToCart :addToCart,
@@ -75,7 +139,11 @@ function ProductProvider(props) {
             cart:cart,
             cartSubTotal : cartSubTotal,
             cartTotal : cartTotal,
-            cartTax :cartTax
+            cartTax :cartTax,
+            increment:increment ,
+            decrement : decrement ,
+            removeItem : removeItem ,
+            clearCart : clearCart
 
 }}> 
     {/* <button onClick = {testMe}> test Me </button> */}

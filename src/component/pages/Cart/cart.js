@@ -4,6 +4,7 @@ import CartColumn from './CartColumn';
 import CartList from './CartList'
 import Title from '../../Title';
 import CartEmpty from '../Cart/CartEmpty'
+import CartTotals from '../Cart/CartTotals'
 
 function Cart() {
     return (
@@ -18,6 +19,7 @@ function Cart() {
                                  <Title name = "your" title = "cart"/>
                                 <CartColumn />
                                 <CartList value ={value}/>
+                                <CartTotals value ={value} />
                              </React.Fragment>
 
                          )

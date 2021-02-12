@@ -8,6 +8,7 @@ import Menu from './component/pages/Menu';
 import SignIn from './component/pages/SignIn';
 import SignUp from './component/pages/SignUp';
 import Imag from './component/pages/imag';
+import Default from './component/Default'
 
 
 
@@ -26,7 +27,7 @@ function App() {
       <Route exact path = "/sign-in" component = {SignIn}/>
       <Route exact path = "/sign-up" component = {SignUp}/>
       <Route exact path = "/my-bag" component = {Imag}/>
-      <Redirect to = "/"/>
+      <Route component={Default} />
       
      
       </Switch>
