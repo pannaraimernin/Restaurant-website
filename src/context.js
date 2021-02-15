@@ -14,14 +14,9 @@ function ProductProvider(props) {
   
 
     useEffect(()=>{
-     setData()
-     
-    },[])
+     setData()},[])
     
-    useEffect(()=> {addTotal()},[])
-    useEffect(()=> {setData();
-        addTotal()},[])
-    useEffect(()=>{addTotal()},[])
+    useEffect(()=> {addTotal()},[products,cart])
     
     const setData = ()=>{
         let tempProducts = [];
@@ -34,15 +29,6 @@ function ProductProvider(props) {
         setProducts(tempProducts)
     }
 
-// const testMe = ()=>{
-//     console.log("state product:" ,products[0].inCart)
-//     console.log("store product:" ,storeProducts[0].inCart)
-//     const tempProducts = [...products]
-//     tempProducts[0].inCart = true
-//     setProducts(tempProducts)
-//     console.log("state product:" ,products[0].inCart)
-//     console.log("store product:" ,storeProducts[0].inCart)
-// }
 
     const getItem  = (id)=>  {
         const product = products.find(item => 
@@ -64,12 +50,12 @@ function ProductProvider(props) {
         product.inCart = true;
         const price = product.price;
         product.total = price 
-   setProducts( [...tempProducts])
-    setCart([...cart, product])
+        setProducts( [...tempProducts])
+        setCart([...cart, product])
             
           }
 
-           const increment =(id)=>{
+    const increment =(id)=>{
             let tempCart = [...cart]
             const selectProduct = tempCart.find( item=> item.id === id)
             const index = tempCart.indexOf(selectProduct) 
@@ -81,7 +67,7 @@ function ProductProvider(props) {
 
 
           }
-          const decrement =(id)=>{
+    const decrement =(id)=>{
             let tempCart = [...cart]
             const selectProduct = tempCart.find( item=> item.id === id)
             const index = tempCart.indexOf(selectProduct) 
@@ -95,7 +81,7 @@ function ProductProvider(props) {
            setCart([...tempCart])
 
         }
-        const removeItem =(id)=>{
+    const removeItem =(id)=>{
             let tempProducts = [...products]
             let tempCart = [...cart]
             tempCart = tempCart.filter(item => item.id !==id)
@@ -111,10 +97,10 @@ function ProductProvider(props) {
              
         }
        
-        const clearCart = ()=>{
+    const clearCart = ()=>{
             setCart([])
         }
-        const addTotal = ()=>{
+    const addTotal = ()=>{
             let subTotal = 0; 
             cart.map(item => (subTotal += item.total))
             const tempTax = subTotal * 0.1;
@@ -126,7 +112,16 @@ function ProductProvider(props) {
 
 
         }
-        
+        // const testMe = ()=>{
+        //     console.log("state product:" ,products[0].inCart)
+        //     console.log("store product:" ,storeProducts[0].inCart)
+        //     const tempProducts = [...products]
+        //     tempProducts[0].inCart = true
+        //     setProducts(tempProducts)
+        //     console.log("state product:" ,products[0].inCart)
+        //     console.log("store product:" ,storeProducts[0].inCart)
+        // }
+
         
 
     return (

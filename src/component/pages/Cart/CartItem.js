@@ -8,7 +8,7 @@ function CartItem({item,value}) {
     return (
         <div>
             <div>
-                <img 
+                <img alt="description of image"
             src={img} style={{width : '100px' , height : '100px'}}/>
             </div>
             <div>
