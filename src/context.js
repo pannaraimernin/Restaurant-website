@@ -16,7 +16,16 @@ function ProductProvider(props) {
     useEffect(()=>{
      setData()},[])
     
-    useEffect(()=> {addTotal()},[products,cart])
+    useEffect(()=> { const addTotal = ()=>{
+        let subTotal = 0; 
+        cart.map(item => (subTotal += item.total))
+        const tempTax = subTotal * 0.1;
+        const tax = parseFloat(tempTax.toFixed(2))
+        const total = subTotal + tax;
+        setCartSubTotal(subTotal)
+        setCartax(tax)
+        setCartTotal(total)} 
+        addTotal()},[products,cart]);
     
     const setData = ()=>{
         let tempProducts = [];
@@ -100,18 +109,18 @@ function ProductProvider(props) {
     const clearCart = ()=>{
             setCart([])
         }
-    const addTotal = ()=>{
-            let subTotal = 0; 
-            cart.map(item => (subTotal += item.total))
-            const tempTax = subTotal * 0.1;
-            const tax = parseFloat(tempTax.toFixed(2))
-            const total = subTotal + tax;
-            setCartSubTotal(subTotal)
-            setCartax(tax)
-            setCartTotal(total)
+    // const addTotal = ()=>{
+    //         let subTotal = 0; 
+    //         cart.map(item => (subTotal += item.total))
+    //         const tempTax = subTotal * 0.1;
+    //         const tax = parseFloat(tempTax.toFixed(2))
+    //         const total = subTotal + tax;
+    //         setCartSubTotal(subTotal)
+    //         setCartax(tax)
+    //         setCartTotal(total)
 
 
-        }
+        // }
         // const testMe = ()=>{
         //     console.log("state product:" ,products[0].inCart)
         //     console.log("store product:" ,storeProducts[0].inCart)
