@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 // import PayPalButton from '../Cart/PayPalButton'
+import styled from "styled-components"
 
 function CartTotals({value}) {
     const {cartSubTotal,cartTax,cartTotal,clearCart} = value;
    
     return (
-        <React.Fragment>
+        <TotalWrapper>
+            <div className = "Cart-total">
             <Link to = "/">
                 <button onClick={()=>clearCart()}>Clear cart</button>
             </Link>
@@ -23,8 +25,13 @@ function CartTotals({value}) {
                 <strong>$ {cartTotal}</strong>
             </h5>
             {/* <PayPalButton total ={cartTotal} clearCart = {clearCart} history = {history}/> */}
-        </React.Fragment>
+            </div>
+            </TotalWrapper>
     )
 }
-
+const TotalWrapper = styled.div`
+.Cart-total{
+    margin-left: 700px;
+}
+`
 export default CartTotals

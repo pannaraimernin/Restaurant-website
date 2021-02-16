@@ -9,7 +9,6 @@ import CartTotals from '../Cart/CartTotals'
 function Cart() {
     return (
         <section>
-             This is cart component
              <ProductConsumer>
                  {value =>{
                      const {cart} = value;

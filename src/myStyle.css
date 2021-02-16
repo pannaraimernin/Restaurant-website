@@ -68,7 +68,15 @@ body {
     width: 1050px;
     border-radius: 25px;
     padding: 50px; 
-    margin-top: 20px;
+    margin-top: 20px;}
+
+.Home-page .Cart-column{
+        background-color: #F8BD45;
+        width: 1050px;
+        border-radius: 25px;
+        padding: 15px; 
+        display: grid;
+        
   
 
 
@@ -98,6 +106,7 @@ margin-top: 50px;
 .Home-page .Signup{
     background-color:#FEF7E5;
     width: 90%;
+    
     
 }
 .home h1{

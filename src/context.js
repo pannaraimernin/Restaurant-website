@@ -6,7 +6,6 @@ const ProductContext = React.createContext();
  
 function ProductProvider(props) {
     const [products,setProducts] =  useState([])
-    // const [products,setProducts] =  useState(storeProducts)
     const [cart,setCart] = useState([])
     const[cartSubTotal,setCartSubTotal] = useState(0)
     const[cartTotal,setCartTotal] = useState()
@@ -109,16 +108,6 @@ function ProductProvider(props) {
     const clearCart = ()=>{
             setCart([])
         }
-    // const addTotal = ()=>{
-    //         let subTotal = 0; 
-    //         cart.map(item => (subTotal += item.total))
-    //         const tempTax = subTotal * 0.1;
-    //         const tax = parseFloat(tempTax.toFixed(2))
-    //         const total = subTotal + tax;
-    //         setCartSubTotal(subTotal)
-    //         setCartax(tax)
-    //         setCartTotal(total)
-
 
         // }
         // const testMe = ()=>{
