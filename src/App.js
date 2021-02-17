@@ -17,7 +17,7 @@ function App() {
   
   return (
     <div className="App">
-      <div className = 'Home-page' style={{backgroundImage: 'url(images/mainBg.jpg)' ,backgroundsize: '100%'}}>
+      <div className = 'Home-page' style={{backgroundImage: 'url(images/mainBg.jpg)' ,backgroundsize: '100%' }}>
   
       
       <Switch>
