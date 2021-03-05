@@ -5,26 +5,15 @@ import { ProductConsumer } from '../../context';
 
 import Product from "../Product";
 import {ShoppingCartOutlined } from '@ant-design/icons';
+import Nav from './Nav';
+import styled from 'styled-components';
 
 
 
 function Menu(props) {
-   
- 
-  
-    return (
-        <div> 
-          
-            
-            <Link to = "/"> <Button>Home</Button> </Link>
-           <Button>Menu</Button> 
-            
-            <Link to = "/sign-in"> <Button>Sign In</Button> </Link>
-            <Link to = "/sign-up"> <Button>Sign Up</Button> </Link>
-           
-            <Link to = "/my-bag"> <Button style={{ width :"40px",
-    height :"30px", color: 'white' }} ><ShoppingCartOutlined style={{ fontSize: '20px', color: '#F8BD4' }} /></Button>
-            </Link>
+   return (
+       <MenuWapper>
+           <Nav/>
             <div className ='Menu'>
            
             <ProductConsumer>
@@ -38,8 +27,26 @@ function Menu(props) {
             </div>
             
             
-        </div>
+
+    </MenuWapper>
     )
 }
+const MenuWapper = styled.div`
+.Menu{
+    background-color:#FEF7E5;
+    width: 1050px;
+    border-radius: 25px;
+    padding: 50px; 
+    margin-top: 20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-items: center;
+    grid-gap: 1rem;
+   
 
+
+   
+}
+
+`
 export default Menu;

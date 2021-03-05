@@ -3,18 +3,13 @@ import { Link } from 'react-router-dom';
 import { Form, Input, Button, Row, Col, Divider } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import {ShoppingCartOutlined} from '@ant-design/icons';
+import Nav from './Nav';
 
 function SignUp() {
     
     return (
         <div>
-            <Link to = "/"> <Button>Home</Button> </Link>
-            <Link to = "/menu"> <Button>Menu</Button> </Link>
-            <Link to = "/sign-in"> <Button>Sign In</Button> </Link>
-            <Button>Sign Up</Button>
-            
-            <Link to = "/my-bag"> <Button style={{ width :"40px",
-    height :"30px", color: 'white' }} ><ShoppingCartOutlined style={{ fontSize: '20px', color: '#F8BD4' }} /></Button> </Link>
+            <Nav/>
             <Row justify="center" >
             <Col xs={23} sm={23} md={23} lg={14} xl={14} xxl={12}>
                 <div

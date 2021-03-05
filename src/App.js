@@ -1,6 +1,7 @@
 
 import './App.css';
-import './myStyle.css'
+import './myStyle.css';
+import './index.css';
 
 import {Switch,Route} from 'react-router-dom';
 import Home from './component/pages/Home';
@@ -17,7 +18,7 @@ function App() {
   
   return (
     <div className="App">
-      <div className = 'Home-page' style={{backgroundImage: 'url(images/mainBg.jpg)' ,backgroundsize: '100%' }}>
+      <div className = 'Container'>
   
       
       <Switch>

@@ -27,18 +27,7 @@ function Cart(props) {
                          
                      }
                  }}
-             </ProductConsumer>
-           
-                
-                       
-                            
-
-                           
-                          
-                        
-               
-           
-            
+             </ProductConsumer>     
         </section>
     )
 }

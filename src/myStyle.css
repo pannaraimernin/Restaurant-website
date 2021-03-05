@@ -1,29 +1,27 @@
 
-body {
-   
-    color:black;
-    
-   
-   }
-   h1 {
-    color: black;
-    text-align: center;
-    font: italic 200% fantasy;
-   }
+  
+  
+  
  
    .Header > div {
        font-size: 20px;
        font-style: inherit;
        display: grid;
        position: relative;
-   }
+   } 
+   .Container{
+  overflow: hidden;
+  position: center; 
+  min-height: 100vh;
+  min-width: 100vh;
+  background-size:100%; 
+  display:flex;
+  justify-content: center;
+  } 
    div  {
     color: rgb(63, 61, 61);
    
 }
-     
-
-   
 .App button .basket-icon {
     width :40px;
     height :30px;
@@ -38,39 +36,15 @@ body {
        height :35px;
    }
    
-   
-   .Home-page{
-  overflow: hidden;
-  position: center; 
-  min-height: 100vh;
-  min-width: 100vh;
-  background-size:100%; 
-  display: grid;
-  justify-content: center;
-  }
-.Home-page .home{
-    background-color:#FEF7E5;
-    width: 1050px;
-    border-radius: 25px;
-    padding: 50px; 
-    margin-top: 20px;
-
   
-    
-}
-.home{
+
+/* .home{
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-.Home-page .Menu{
-    background-color:#FEF7E5;
-    width: 1050px;
-    border-radius: 25px;
-    padding: 50px; 
-    margin-top: 20px;}
+} */
 
-.Home-page .Cart-column{
+.Cart-column{
         background-color: #F8BD45;
         width: 1050px;
         border-radius: 25px;
@@ -84,33 +58,76 @@ body {
 }
 /* Menu */
 .Menu{
-margin-top: 50px;
+/* margin-top: 50px;
   display:grid;
-  grid-template-columns: repeat(3,auto);
-  justify-items: center;
-  row-gap:50px;
-  column-gap: 5px;
-}
-.card-container{
-    background-color : white;
+  /* grid-template-columns: repeat(3,auto); */
+  /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center; */
+  /* row-gap:50px;
+  column-gap: 5px; */
+  /* grid-gap: 20px;
+  max-width: 960px;
+  margin: 0 auto 30px; */ 
+  
+  /* display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  */
+} 
+
+/* .card-container{ */
+    /* background-color : white;
     box-shadow: 2px 2px 3px grey;
     border-radius: 10px;
+    position: relative; */
+    /* display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  } */
+ /* .card{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;  
+    display: flex;
+    padding: 1rem;
+}  */
+  /* @media (min-width: 500px) {
+    .card {
+      width: 100%;
+    }
+  }
+  @media (min-width: 700px) {
+    .card {
+      width: 60%;
+    }
+  } */
 
-}
+/* .card-footer {
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
 
-.Home-page .Signin{
+} */
+
+
+.Container .Signin{
     background-color:#FEF7E5;
     width: 90%;
     
 }
-.Home-page .Signup{
+.Container .Signup{
     background-color:#FEF7E5;
     width: 90%;
     
     
 }
-.home h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* .home h1{
+   
     font-size: 5em;
     margin-top: 100px;
     margin-right: 200px;
@@ -118,41 +135,10 @@ margin-top: 50px;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
-  }
+  } */
 
-.home .Explore .Btn-menu{
-    border-radius: 20px;
-    color: white;
-    background-color:black;
-    width: 240px;
-    height: 80px;
-    font-size: 20px;
-    justify-Content: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-  }
- 
-  
 
-.home  .Explore .Btn-menu:hover{
-    cursor: pointer;
-    width: 245px;
-    height: 85px;
-    background-color: #000000;
-    color: white;
-    border-color: black;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-} 
-.home .Explore{
-    grid-row-start: 2;
-    grid-row-end: 3;
-
-  }
-
-.home img{
+/* .home img{
     border-radius : 50%;
     background-color: #000000;
     width :500px; 
@@ -161,7 +147,7 @@ margin-top: 50px;
     grid-row-start: 1;
     grid-row-end: 3;
     
-}
+} */
 .App button{
     border-radius: 20px;
     background-color: #000000;

@@ -1,6 +1,13 @@
 .App {
-  text-align: center;}
- 
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+
+
 
 
 
@@ -29,3 +36,4 @@
     transform: rotate(360deg);
   }
 }
+

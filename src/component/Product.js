@@ -10,7 +10,7 @@ export default function Product(props) {
 
     
     return (
-     <ProductWrapper className = "card-container" >
+     <ProductWrapper >
         <div className="card">
           <ProductConsumer>
             {(value) =>
@@ -60,15 +60,13 @@ Product.propTypes = {
 }
 
  const ProductWrapper = styled.div`
- 
- .card {
+.card {
+  background-color : white;
     border-color: transparent;
     transition: all 1s linear;
     margin-top: 50px;
     display:grid;
-    grid-template-columns: repeat(4,auto);
-    grid-template-rows: auto;
-    row-gap:30px;
+    align-items: center;
     grid-template-areas: 
     "header header header header"
     "main main main main"
@@ -79,8 +77,9 @@ Product.propTypes = {
       border-top: transparent;
     transition: all 1s linear;
     // display : flex;
-    // justify-content: space-between;
+    //  justify-content: space-between;
     grid-area: footer;
+
   }
   .food-title{
     font-size: 20px;
@@ -106,11 +105,15 @@ Product.propTypes = {
   }
   .card-img-top {
     transition: all 1s linear;
+    align-items: center;
   }
   .img-container {
     position: relative;
+    align-items: center;
      overflow: hidden;
      grid-area: header;
+     margin: auto;
+     margin-top:20px;
      width:200px;
      hight:300px;
   }
@@ -149,11 +152,7 @@ Product.propTypes = {
     height :30px;
 
 }
-
-
-
-  
-  .cart-btn:hover {
+ .cart-btn:hover {
     color: var(--mainBlue);
     cursor: pointer;
   }
