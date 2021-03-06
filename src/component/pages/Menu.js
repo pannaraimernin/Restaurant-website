@@ -1,7 +1,6 @@
 import React from 'react'
 import { ProductConsumer } from '../../context';
 import Product from "../Product";
-import {ShoppingCartOutlined } from '@ant-design/icons';
 import Nav from './Nav';
 import styled from 'styled-components';
 
