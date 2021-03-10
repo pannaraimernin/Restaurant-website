@@ -15,8 +15,9 @@
   min-height: 100vh;
   min-width: 100vh;
   background-size:100%; 
-  display:flex;
+  /* display:flex; */
   justify-content: center;
+  margin: 2rem;
   } 
    div  {
     color: rgb(63, 61, 61);

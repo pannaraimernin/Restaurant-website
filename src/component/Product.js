@@ -64,20 +64,22 @@ Product.propTypes = {
   background-color : white;
     border-color: transparent;
     transition: all 1s linear;
-    margin-top: 50px;
     display:grid;
-    align-items: center;
-    grid-template-areas: 
+    text-align:center;
+    position:relative;
+  grid-template-areas: 
     "header header header header"
     "main main main main"
     "footer footer footer footer";
+    border-radius: 25px;
+    witdth:10px;
+    box-sizing: border-box;
+   
   }
   .card-footer {
      background: transparent;
       border-top: transparent;
     transition: all 1s linear;
-    // display : flex;
-    //  justify-content: space-between;
     grid-area: footer;
 
   }

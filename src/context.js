@@ -18,8 +18,10 @@ function ProductProvider(props) {
     useEffect(()=> { const addTotal = ()=>{
         let subTotal = 0; 
         cart.map(item => (subTotal += item.total))
-        const tempTax = subTotal * 0.1;
-        const tax = parseFloat(tempTax.toFixed(2))
+        const tempTax = subTotal * 0.1
+        const tax =  Number(tempTax.toFixed(2))
+        
+         
         const total = subTotal + tax;
         setCartSubTotal(subTotal)
         setCartax(tax)

@@ -44,6 +44,7 @@ const HomeWrapper = styled.div`
     margin-top: 20px;
     display:block;
     align-items: center;
+    background-size: cover;
 
 }
 @media(min-width: 700px){
@@ -67,13 +68,14 @@ const HomeWrapper = styled.div`
     .Title h1{
         color: Black;
         text-align: center;
-        font-size:15px;
+        font-size:25px;
         font-weight:bold;
         font-family: 'Krona One', sans-serif;
-    //     margin-block-start: 1em;
-    //     margin-block-end: 1em;
-    //     margin-inline-start: 0px;
-    //     margin-inline-end: 0px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        background-repeat: no-repeat;
      }
     @media(min-width: 700px) {
             .Title h1{

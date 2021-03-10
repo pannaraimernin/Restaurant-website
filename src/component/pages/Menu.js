@@ -30,19 +30,15 @@ function Menu(props) {
 const MenuWapper = styled.div`
 .Menu{
     background-color:#FEF7E5;
-    width: 1050px;
-    border-radius: 25px;
-    padding: 50px; 
+    // width: 1050px;
+    padding: 4rem 2rem;
     margin-top: 20px;
     display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    align-items: center;
-    grid-gap: 1rem;
-   
-
-
-   
-}
+    grid-template-columns: repeat(auto-fit,22rem);
+    justify-content:center;
+    grid-gap: 3rem;
+    
+  }
 
 `
 export default Menu;
