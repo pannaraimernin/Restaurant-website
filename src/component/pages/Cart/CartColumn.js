@@ -19,7 +19,9 @@ function CartColumn() {
 }
 const CartWrapper = styled.div`
 .Cart-column{
-    position: relative;
+    //  position: block;
+    
+
 }
 .col-1{
     grid-column: 1;

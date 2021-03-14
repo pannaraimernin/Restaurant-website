@@ -23,6 +23,7 @@ function Nav() {
  Menu-bar{
    
     direction: row;
+    align-items: center;
     float:left;
     
 

@@ -41,10 +41,11 @@ const HomeWrapper = styled.div`
     width: 1050px;
     border-radius: 25px;
     padding: 50px; 
-    margin-top: 20px;
+    // margin-top: 20px;
     display:block;
     align-items: center;
     background-size: cover;
+    margin: 25px 200px;
 
 }
 @media(min-width: 700px){

@@ -29,8 +29,8 @@ function Menu(props) {
 }
 const MenuWapper = styled.div`
 .Menu{
-    background-color:#FEF7E5;
-    // width: 1050px;
+    //background-color:#FEF7E5;
+    //width: 1050px;
     padding: 4rem 2rem;
     margin-top: 20px;
     display:grid;

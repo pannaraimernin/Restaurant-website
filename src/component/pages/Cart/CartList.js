@@ -1,6 +1,6 @@
 
 import React from 'react'
-
+import styled from "styled-components"
 import CartItem from '../Cart/CartItem';
 
 
@@ -8,8 +8,8 @@ function CartList({value}) {
     const {cart} = value;
        
     return (
-        
-            <div>
+        <CartListWrapper>
+            <div className = "cart-list"> 
                
                 {cart.map(item =>{
                     return <CartItem key = {item.id} item={item} value = {value} />
@@ -23,9 +23,15 @@ function CartList({value}) {
               
             
         </div>
+        </CartListWrapper>
         
        
     )
 }
-
+const CartListWrapper = styled.div`
+.cart-list{
+    margin-right:500px;
+}
+`
 export default CartList
+
