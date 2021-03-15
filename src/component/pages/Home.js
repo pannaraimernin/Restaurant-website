@@ -24,7 +24,7 @@ function Home() {
                 
                 
                 <div className = "Title-image">
-                    <img alt="" src = "https://cdn.pixabay.com/photo/2015/05/31/13/02/salad-791643_960_720.jpg" />
+                    <img alt="" src = "images/salad.jpg"/>
                     </div>
                     </div>
                     
