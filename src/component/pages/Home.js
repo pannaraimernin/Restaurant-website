@@ -38,9 +38,10 @@ function Home() {
 const HomeWrapper = styled.div`
 .home{
     background-color:#FEF7E5;
-    width: 100%;
+    width: 80%;
     border-radius: 25px;
     padding: 50px;
+    
     display:block;
     align-items: center;
     background-size: cover;
