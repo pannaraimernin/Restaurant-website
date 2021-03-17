@@ -38,14 +38,13 @@ function Home() {
 const HomeWrapper = styled.div`
 .home{
     background-color:#FEF7E5;
-    width: 1050px;
+    width: 100%;
     border-radius: 25px;
-    padding: 50px; 
-    // margin-top: 20px;
+    padding: 50px;
     display:block;
     align-items: center;
     background-size: cover;
-    margin: 25px 200px;
+    margin: 25px auto;
 
 }
 @media(min-width: 700px){
