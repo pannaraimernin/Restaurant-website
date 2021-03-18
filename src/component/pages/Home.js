@@ -41,7 +41,6 @@ const HomeWrapper = styled.div`
     width: 80%;
     border-radius: 25px;
     padding: 50px;
-    // display:block;
     background-size: contain;
     margin: 25px auto;
     display: flex;
@@ -61,16 +60,13 @@ const HomeWrapper = styled.div`
     margin:auto;
     align-items: center;
     }
-    @media(min-width: 700px){
-        .show-title{
     
-        }
          
     }
     .Title h1{
         color: Black;
         text-align: center;
-        font-size:25px;
+        font-size:18px;
         font-weight:bold;
         font-family: 'Krona One', sans-serif;
         margin-block-start: 1em;
@@ -84,7 +80,8 @@ const HomeWrapper = styled.div`
                 color:black;
                 font-size:50px;
                 }}
-        .Title-image img{
+        
+            .Title-image img{
             position: relative;
               border-radius : 50%;
               width :230px; 
@@ -106,8 +103,8 @@ const HomeWrapper = styled.div`
             border-radius: 20px;
             color: white;
             background-color:black;
-            width: 240px;
-            height: 80px;
+            width: 200px;
+            height: 60px;
             font-size: 20px;
             justify-Content: center;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
