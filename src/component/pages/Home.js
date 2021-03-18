@@ -41,11 +41,12 @@ const HomeWrapper = styled.div`
     width: 80%;
     border-radius: 25px;
     padding: 50px;
-    
-    display:block;
-    align-items: center;
-    background-size: cover;
+    // display:block;
+    background-size: contain;
     margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 @media(min-width: 700px){
@@ -84,11 +85,9 @@ const HomeWrapper = styled.div`
                 font-size:50px;
                 }}
         .Title-image img{
-            align-items: center;
-             margin-top: 20px;
-              flex-direction: column; 
+            position: relative;
               border-radius : 50%;
-              width :250px; 
+              width :230px; 
               height : 150px;
               }
             @media(min-width: 700px) {
@@ -98,10 +97,6 @@ const HomeWrapper = styled.div`
                   
                 }}
           .Explore{
-            //   margin-right: 200px;
-            //   grid-row-start: 2;
-              // grid-row-end: 3;
-            //   margin:auto;
             align-items: center;
           }
           

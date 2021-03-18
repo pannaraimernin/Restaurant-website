@@ -1,13 +1,14 @@
 import React from 'react'
 import {Form, Input, Button, Row, Col, Divider} from 'antd';
 import Title from 'antd/lib/typography/Title';
-
+import styled from "styled-components";
 import Nav from './Nav';
 
 
 function SignIn() {
     
     return (
+        <SignInWrapper>
         <div > 
            <Nav/>
         
@@ -52,7 +53,9 @@ function SignIn() {
         </Row>
 
         </div>
+        </SignInWrapper>
     )
 }
-
+const SignInWrapper = styled.div`
+`
 export default SignIn;
