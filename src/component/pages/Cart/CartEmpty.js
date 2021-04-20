@@ -3,7 +3,7 @@ import React from 'react'
 function CartEmpty() {
     return (
         <div>
-            <h1>Cart Empty</h1>
+            <h1>Cart is Empty</h1>
         </div>
     )
 }

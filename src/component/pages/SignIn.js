@@ -1,37 +1,46 @@
 import React from 'react'
 import {Form, Input, Button, Row, Col, Divider} from 'antd';
 import Title from 'antd/lib/typography/Title';
-import styled from "styled-components";
 import Nav from './Nav';
 
+const layout = {
+    labelCol: { xs: 24, sm: 5, md: 4, lg: 5, xl: 4, xxl: 4 },
+    wrapperCol: { xs: 24, sm: 19, md: 20, lg: 19, xl: 20, xxl: 21 },
+};
 
-function SignIn() {
+export default function SignIn() {
+   
+        const onFinish = (values) => 
+          console.log('Success:', values);
+        
     
     return (
-        <SignInWrapper>
-        <div > 
-           <Nav/>
-        
+       
+        <div>
             <div className = 'Signin'></div>
+            <Nav/>
             <Row justify="center">
-            <Col xs={23} sm={23} md={23} lg={14} xl={14} xxl={12}>
+            <Col  xs={23} sm={23} md={23} lg={14} xl={14} xxl={12}>
                 <div className="Form">
                     <Row justify="center">
                         <Title level={2} className="Title">
-                            Login
+                            Sign in
                     </Title>
                     </Row>
                     <Divider className="Divider" />
                     <Form
-                        // className="App"
-                        // {...layout}
-                        // onFinish={onFinish}
-                        // style={{ width: "100%" }}
+                        className="App"
+                        {...layout}
+                        onFinish={onFinish}
+                        style={{ width: "70%"}}
                     >
                         <Form.Item
+                        
                             label="Username"
                             name="username"
                             rules={[{ required: true, message: 'Please input your username!' }]}
+                        
+
                         >
                             <Input />
                         </Form.Item>
@@ -51,11 +60,9 @@ function SignIn() {
                 </div>
             </Col>
         </Row>
-
         </div>
-        </SignInWrapper>
+
+       
+        
     )
 }
-const SignInWrapper = styled.div`
-`
-export default SignIn;

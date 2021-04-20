@@ -18,10 +18,14 @@ function CartColumn() {
     )
 }
 const CartWrapper = styled.div`
-.Cart-column{
-    //  position: block;
-    
 
+.Cart-column{
+    margin-top:25px;
+    background-color: #F8BD45;
+    width: 1050px;
+    border-radius: 25px;
+    padding: 15px; 
+    display: grid;
 }
 .col-1{
     grid-column: 1;

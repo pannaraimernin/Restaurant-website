@@ -14,15 +14,7 @@ function CartList({value}) {
                 {cart.map(item =>{
                     return <CartItem key = {item.id} item={item} value = {value} />
                 })}
-               
-                
-                    
-               
-
-                
-              
-            
-        </div>
+            </div>
         </CartListWrapper>
         
        

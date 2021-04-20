@@ -32,21 +32,8 @@
        width :45px;
        height :35px;
    }
-   
-  
+      
 
-.Cart-column{
-        background-color: #F8BD45;
-        width: 1050px;
-        border-radius: 25px;
-        padding: 15px; 
-        display: grid;
-        
-  
-
-
-    
-}
 /* Menu */
 .Menu{
 /* margin-top: 50px;
@@ -156,7 +143,13 @@
 .Signup{
     font-size: 20px;
 }
-
+table{
+  width: 100%;
+  text-align: center;
+}
+td{
+  width:10%;
+}
 
 
 

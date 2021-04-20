@@ -11,6 +11,7 @@ function Menu(props) {
        <MenuWapper>
            <Nav/>
             <div className ='Menu'>
+                <div className = "container">
            
             <ProductConsumer>
                 {value=>{
@@ -21,6 +22,7 @@ function Menu(props) {
 
             </ProductConsumer>
             </div>
+            </div>
             
             
 
@@ -28,17 +30,17 @@ function Menu(props) {
     )
 }
 const MenuWapper = styled.div`
-.Menu{
-    //background-color:#FEF7E5;
-    //width: 1050px;
+.container{
+    width:80%;
+    background-color:#FEF7E5;
+    background-position: bottom right;
     padding: 4rem 2rem;
-    margin-top: 20px;
+    margin: 25px auto;
     display:grid;
     grid-template-columns: repeat(auto-fit,22rem);
     justify-content:center;
     grid-gap: 3rem;
     
   }
-
 `
 export default Menu;

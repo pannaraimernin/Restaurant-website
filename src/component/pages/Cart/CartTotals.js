@@ -31,7 +31,8 @@ function CartTotals({value,history}) {
 }
 const TotalWrapper = styled.div`
 .Cart-total{
-    margin-left: 700px;
+    margin-top:100px;
+    margin-left: 400px;
 }
 `
 export default CartTotals
