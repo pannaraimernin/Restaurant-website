@@ -67,7 +67,7 @@ Product.propTypes = {
     display:grid;
     text-align:center;
     position:relative;
-  grid-template-areas: 
+    grid-template-areas: 
     "header header header header"
     "main main main main"
     "footer footer footer footer";
@@ -87,9 +87,7 @@ Product.propTypes = {
     font-size: 20px;
     grid-area: main;
    
-
-  
-  }
+}
   .item-price{
     margin-bottom :20px;
     grid-area: footer;

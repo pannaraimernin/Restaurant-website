@@ -54,7 +54,7 @@ export default function SignIn() {
                         </Form.Item>
 
                         <Button className="Button" type="primary" htmlType="submit">
-                            Submit
+                            Sign in
                         </Button>
                     </Form>
                 </div>

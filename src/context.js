@@ -13,7 +13,7 @@ function ProductProvider(props) {
   
 
     useEffect(()=>{
-     setData()},[])
+     setData()},[]) //executes the callback just once, after initial mounting.
     
     useEffect(()=> { const addTotal = ()=>{
         let subTotal = 0; 
@@ -26,7 +26,8 @@ function ProductProvider(props) {
         setCartSubTotal(subTotal)
         setCartax(tax)
         setCartTotal(total)} 
-        addTotal()},[products,cart]);
+        addTotal()},[products,cart]);// Runs ONCE after initial rendering
+        // and after every rendering ONLY IF `prop` or `state` changes
     
     const setData = ()=>{
         let tempProducts = [];

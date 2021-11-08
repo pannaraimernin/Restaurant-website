@@ -96,10 +96,7 @@ const HomeWrapper = styled.div`
           .Explore{
             align-items: center;
           }
-          
-
-          
-          .home .Explore .Btn-menu{
+           .home .Explore .Btn-menu{
             border-radius: 20px;
             color: white;
             background-color:black;

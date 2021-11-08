@@ -87,7 +87,7 @@ function SignUp() {
                         </Form.Item>
 
                             <Button className="Button" type="primary" htmlType="submit">
-                                Register
+                                Sign Up
                             </Button>
                     </Form>
                 </div>

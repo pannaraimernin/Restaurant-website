@@ -2,7 +2,7 @@ import React from 'react'
 import Cart from './Cart/cart';
 import Nav from './Nav';
 
-function Imag() {
+function Mybag() {
     return (
         <div style={{backgroundcolor: 'white' , backgroundsize: '100px'
         }}>
@@ -16,4 +16,4 @@ function Imag() {
     )
 }
 
-export default Imag
+export default Mybag

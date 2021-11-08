@@ -8,7 +8,7 @@ import Home from './component/pages/Home';
 import Menu from './component/pages/Menu';
 import SignIn from './component/pages/SignIn';
 import SignUp from './component/pages/SignUp';
-import Imag from './component/pages/imag';
+import Mybag from './component/pages/Mybag';
 import Default from './component/Default'
 
 
@@ -27,7 +27,7 @@ function App() {
       <Route exact path = "/menu" component = {Menu}/>
       <Route exact path = "/sign-in" component = {SignIn}/>
       <Route exact path = "/sign-up" component = {SignUp}/>
-      <Route exact path = "/my-bag" component = {Imag}/>
+      <Route exact path = "/my-bag" component = {Mybag}/>
       <Route component={Default} />
       
      
